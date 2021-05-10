@@ -2,9 +2,10 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
+      请参与开发的同学认真阅读<br>
+      <a href="https://pkuwenwen.readthedocs.io/zh/latest/view_description/view_description.html" target="_blank" rel="noopener">这个项目的文档</a>
+      和
+      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">Vue的文档</a>.
     </p>
     <h3>Installed CLI Plugins</h3>
     <ul>
