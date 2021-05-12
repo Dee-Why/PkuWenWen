@@ -1,77 +1,14 @@
 <template>
-  <div class="about">
-    <h1>现在这个AboutPage用来测试各个element-plus组件的使用效果</h1>
-  </div>
-<<<<<<< Updated upstream
-=======
-  a row of buttons
-  <el-row>
-    <el-button>默认按钮</el-button>
-    <el-button type="primary">主要按钮</el-button>
-    <el-button type="success">成功按钮</el-button>
-    <el-button type="info">信息按钮</el-button>
-    <el-button type="warning">警告按钮</el-button>
-    <el-button type="danger">危险按钮</el-button>
-  </el-row>
-  many rows
-  <el-row>
-    <el-col :span="24"><div class="grid-content bg-purple-dark">hello</div></el-col>
-  </el-row>
-  <el-row>
-    <el-col :span="12"><div class="grid-content bg-purple"></div></el-col>
-    <el-col :span="12"><div class="grid-content bg-purple-light"></div></el-col>
-  </el-row>
-  <el-row>
-    <el-col :span="8"><div class="grid-content bg-purple"></div></el-col>
-    <el-col :span="8"><div class="grid-content bg-purple-light"></div></el-col>
-    <el-col :span="8"><div class="grid-content bg-purple"></div></el-col>
-  </el-row>
-  <el-row>
-    <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-    <el-col :span="6"><div class="grid-content bg-purple-light"></div></el-col>
-    <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-    <el-col :span="6"><div class="grid-content bg-purple-light"></div></el-col>
-  </el-row>
-  <el-row>
-    <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
-    <el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col>
-    <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
-    <el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col>
-    <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
-    <el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col>
-  </el-row>
-
->>>>>>> Stashed changes
+  <div class="about"></div>
+  <el-divider></el-divider>
+    <el-button round type="success">院系列表</el-button>
+    <el-button round type="info">课程列表</el-button>
+    <el-button round type="warning">提问列表</el-button>
+    <el-button round type="danger">个人页面</el-button>
 </template>
 
 <script>
 </script>
 
 <style lang="scss">
-  .el-row {
-    margin-bottom: 20px;
-    &:last-child {
-     margin-bottom: 0;
-   }
-  }
-  .el-col {
-    border-radius: 4px;
-  }
-  .bg-purple-dark {
-    background: #99a9bf;
-  }
-  .bg-purple {
-    background: #d3dce6;
-  }
-  .bg-purple-light {
-    background: #e5e9f2;
-  }
-  .grid-content {
-    border-radius: 4px;
-    min-height: 36px;
-  }
-  .row-bg {
-    padding: 10px 0;
-    background-color: #f9fafc;
-  }
 </style>

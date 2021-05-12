@@ -6,11 +6,11 @@
       <div class="ms-title">PkuWenWen</div>
       <el-form :model="param" :rules="rules" ref="login" label-width="0px" class="ms-content">
         <el-form-item prop="username">
-          <el-input v-model="param.username" placeholder="请输入用户名">
+          <el-input v-model="param.username" placeholder="请输入用户名" prefix-icon="el-icon-info" clearable>
           </el-input>
         </el-form-item>
         <el-form-item prop="emali">
-          <el-input v-model="param.email" placeholder="请输入邮箱">
+          <el-input v-model="param.email" placeholder="请输入邮箱" prefix-icon="el-icon-message" clearable>
           </el-input>
         </el-form-item>
         <el-form-item prop="password">
@@ -19,8 +19,9 @@
             placeholder="请输入密码"
             v-model="param.password"
             @keyup.enter="registerForm()"
+            prefix-icon=":el-icon-edit"
+            clearable
           >
-            <el-button  icon="el-icon-lock"></el-button>
           </el-input>
         </el-form-item>
         <div class="login-btn">

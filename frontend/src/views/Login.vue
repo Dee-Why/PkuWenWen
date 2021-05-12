@@ -6,11 +6,12 @@
       <div class="ms-title">PkuWenWen</div>
       <el-form :model="param" :rules="rules" ref="login" label-width="0px" class="ms-content">
         <el-form-item prop="username">
-          <el-input v-model="param.username" placeholder="请输入用户名">
+          <el-input v-model="param.username" placeholder="请输入用户名" prefix-icon="el-icon-info" clearable>
           </el-input>
         </el-form-item>
         <el-form-item prop="password">
-          <el-input type="password" placeholder="请输入密码" v-model="param.password"></el-input>
+          <el-input type="password" placeholder="请输入密码" v-model="param.password" prefix-icon="el-icon-edit" clearable>
+          </el-input>
         </el-form-item>
         <div class="login-btn">
           <el-button type="info" @click="submitForm()">登录</el-button>
