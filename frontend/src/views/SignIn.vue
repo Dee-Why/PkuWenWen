@@ -1,6 +1,8 @@
 <template>
   <div class="login-wrap">
     <div class="head">
+      <el-button type="info" round @click="home">Home</el-button>
+      <el-button type="info" round @click="about">About</el-button>
       <el-button type="info" round @click="signup">Sign Up</el-button>
       <el-button type="info" round @click="signin">Sign In</el-button>
     </div>
@@ -37,8 +39,14 @@ export default {
     }
   },
   methods: {
+    home () {
+      this.$router.push('/home')
+    },
+    about () {
+      this.$router.push('/about')
+    },
     signin () {
-      this.$router.push('/login')
+      this.$router.push('/signin')
     },
     signup () {
       this.$router.push('/signup')
