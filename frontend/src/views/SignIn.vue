@@ -1,24 +1,18 @@
 <template>
-  <div class="login-wrap">
-    <div class="head">
-      <el-button type="info" round @click="signup">Sign Up</el-button>
-      <el-button type="info" round @click="signin">Sign In</el-button>
-    </div>
-    <div class="ms-login">
-      <div class="ms-title">PkuWenWen</div>
-      <el-form :model="param" :rules="rules" ref="login" label-width="0px" class="ms-content">
-        <el-form-item prop="username">
-          <el-input v-model="param.username" placeholder="请输入用户名">
-          </el-input>
-        </el-form-item>
-        <el-form-item prop="password">
-          <el-input type="password" placeholder="请输入密码" v-model="param.password"></el-input>
-        </el-form-item>
-        <div class="login-btn">
-          <el-button type="info" @click="submitForm()">登录</el-button>
-        </div>
-      </el-form>
-    </div>
+  <div class="ms-login">
+    <div class="ms-title">PkuWenWen</div>
+    <el-form :model="param" :rules="rules" ref="login" label-width="0px" class="ms-content">
+      <el-form-item prop="username">
+        <el-input v-model="param.username" placeholder="请输入用户名">
+        </el-input>
+      </el-form-item>
+      <el-form-item prop="password">
+        <el-input type="password" placeholder="请输入密码" v-model="param.password"></el-input>
+      </el-form-item>
+      <div class="login-btn">
+        <el-button type="info" @click="submitForm()">登录</el-button>
+      </div>
+    </el-form>
   </div>
 </template>
 
@@ -37,8 +31,14 @@ export default {
     }
   },
   methods: {
+    home () {
+      this.$router.push('/home')
+    },
+    about () {
+      this.$router.push('/about')
+    },
     signin () {
-      this.$router.push('/login')
+      this.$router.push('/signin')
     },
     signup () {
       this.$router.push('/signup')
