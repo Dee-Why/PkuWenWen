@@ -129,7 +129,8 @@ export default {
   line-height: 50px;
   text-align: center;
   font-size: 40px;
-  color: #fff;
+  color: rgba(255,255,255,1);
+  background: rgba(0,0,0,0.5);
   border-bottom: 1px solid #ddd;
 }
 .ms-login {
@@ -139,11 +140,12 @@ export default {
   width: 350px;
   margin: 190px 0 0 -175px;
   border-radius: 5px;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255,255,255,0.3);
   overflow: hidden;
 }
 .ms-content {
   padding: 30px 30px;
+  background: rgba(0,0,0,0.5);
 }
 .login-btn {
   text-align: center;
