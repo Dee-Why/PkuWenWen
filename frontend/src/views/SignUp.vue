@@ -18,6 +18,14 @@
         >
         </el-input>
       </el-form-item>
+      <el-form-item prop="password confirm">
+        <el-input
+          type="password confirm"
+          placeholder="请再次输入密码"
+          v-model="param.password"
+        >
+        </el-input>
+      </el-form-item>
       <div class="login-btn">
         <el-button type="info" @click="registerForm()">注册</el-button>
       </div>
