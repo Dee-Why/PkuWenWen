@@ -22,7 +22,7 @@
         <el-input
           type="password confirm"
           placeholder="请再次输入密码"
-          v-model="param.password"
+          v-model="param.password_confirm"
         >
         </el-input>
       </el-form-item>
@@ -39,7 +39,8 @@ export default {
     return {
       param: {
         username: '',
-        password: ''
+        password: '',
+        password_confirm: ''
       },
       rules: {
         username: [{ required: true, message: '请输入用户名', trigger: 'blur' }],
