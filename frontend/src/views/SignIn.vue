@@ -7,7 +7,7 @@
         </el-input>
       </el-form-item>
       <el-form-item prop="password">
-        <el-input type="password" placeholder="请输入密码" v-model="param.password"></el-input>
+        <el-input type="password" placeholder="请输入密码" v-model="param.password" @keyup.enter="submitForm()"></el-input>
       </el-form-item>
       <div class="login-btn">
         <el-button type="info" @click="submitForm()">登录</el-button>
@@ -44,43 +44,53 @@ export default {
       this.$router.push('/signup')
     },
     submitForm () {
+      this.$refs.login.validate(valid => {
+        if (valid) {
+          this.$message.success('登录成功')
+          localStorage.setItem('ms_username', this.param.username)
+          this.$router.push('/')
+        } else {
+          this.$message.error('请输入账号和密码')
+          return false
+        }
+      })
       // eslint-disable-next-line camelcase
-      var post_request = new FormData()
-      post_request.append('userName', this.param.username)
-      post_request.append('password', this.param.password)
-      const _this = this
-      this.$http
-        .request({
-          url: this.$url + '/login',
-          method: 'post',
-          data: post_request,
-          headers: { 'Content-Type': 'multipart/form-data' }
-        })
-        .then(function (response) {
-          console.log(response)
-          if (response.data.login.retCode === 1) {
-            _this.$message({
-              message: response.data.login.message,
-              type: 'success'
-            })
-
-            localStorage.setItem('ms_username', _this.param.username)
-            _this.$router.push('/dashboard')
-          } else if (response.data.login.retCode === 2) {
-            _this.$message({
-              message: response.data.login.message,
-              type: 'error'
-            })
-          } else {
-            _this.$message({
-              message: response.data.login.message + '！请先注册',
-              type: 'warning'
-            })
-          }
-        })
-        .catch(function (response) {
-          console.log(response)
-        })
+      // var post_request = new FormData()
+      // post_request.append('userName', this.param.username)
+      // post_request.append('password', this.param.password)
+      // const _this = this
+      // this.$http
+      //   .request({
+      //     url: this.$url + '/login',
+      //     method: 'post',
+      //     data: post_request,
+      //     headers: { 'Content-Type': 'multipart/form-data' }
+      //   })
+      //   .then(function (response) {
+      //     console.log(response)
+      //     if (response.data.login.retCode === 1) {
+      //       _this.$message({
+      //         message: response.data.login.message,
+      //         type: 'success'
+      //       })
+      //
+      //       localStorage.setItem('ms_username', _this.param.username)
+      //       _this.$router.push('/dashboard')
+      //     } else if (response.data.login.retCode === 2) {
+      //       _this.$message({
+      //         message: response.data.login.message,
+      //         type: 'error'
+      //       })
+      //     } else {
+      //       _this.$message({
+      //         message: response.data.login.message + '！请先注册',
+      //         type: 'warning'
+      //       })
+      //     }
+      //   })
+      //   .catch(function (response) {
+      //     console.log(response)
+      //   })
     }
   }
 }

@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
   {
@@ -31,8 +31,18 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(process.env.BASE_URL),
   routes
+})
+
+router.beforeEach((to, from, next) => {
+  document.title = `${to.meta.title} | vue-manage-system`
+  const role = localStorage.getItem('ms_username')
+  if (!role && to.path !== '/signin') {
+    next('/signin')
+  } else {
+    next()
+  }
 })
 
 export default router
