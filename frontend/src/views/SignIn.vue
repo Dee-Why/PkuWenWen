@@ -6,20 +6,11 @@
         <el-input v-model="param.username" placeholder="请输入用户名">
         </el-input>
       </el-form-item>
-      <el-form-item prop="emali">
-        <el-input v-model="param.email" placeholder="请输入邮箱">
-        </el-input>
-      </el-form-item>
       <el-form-item prop="password">
-        <el-input
-          type="password"
-          placeholder="请输入密码"
-          v-model="param.password"
-        >
-        </el-input>
+        <el-input type="password" placeholder="请输入密码" v-model="param.password"></el-input>
       </el-form-item>
       <div class="login-btn">
-        <el-button type="info" @click="registerForm()">注册</el-button>
+        <el-button type="info" @click="submitForm()">登录</el-button>
       </div>
     </el-form>
   </div>
